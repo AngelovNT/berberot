@@ -10,10 +10,10 @@ export async function sendVerificationEmail(email: string, name: string, token: 
   await resend.emails.send({
     from: FROM,
     to: email,
-    subject: 'Verify your Clipr account',
+    subject: 'Verify your Berberot account',
     html: `
       <div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:32px 24px;background:#F8F6F2">
-        <h1 style="font-size:24px;font-weight:800;letter-spacing:0.15em;color:#161616;margin:0 0 4px">CLIPR<span style="color:#C49A3C">.</span></h1>
+        <h1 style="font-size:24px;font-weight:800;letter-spacing:0.15em;color:#161616;margin:0 0 4px">BERBEROT<span style="color:#C49A3C">.</span></h1>
         <p style="color:#6B6B6B;font-size:13px;margin:0 0 32px;text-transform:uppercase;letter-spacing:0.08em">Book your next cut</p>
 
         <h2 style="font-size:20px;font-weight:700;color:#161616;margin:0 0 12px">Hi ${name},</h2>
