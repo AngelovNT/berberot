@@ -1,0 +1,37 @@
+{
+  "name": "Clipr",
+  "short_name": "Clipr",
+  "description": "Book your next cut in seconds",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f7f7",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Book Appointment",
+      "url": "/",
+      "description": "Browse and book a barbershop"
+    },
+    {
+      "name": "My Bookings",
+      "url": "/my-bookings",
+      "description": "View your upcoming appointments"
+    }
+  ]
+}
