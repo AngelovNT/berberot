@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
 
-const MONGODB_URI = 'mongodb://localhost:27017/clipr'
+const MONGODB_URI = process.env.SEED_DB_URI || 'mongodb://localhost:27017/clipr'
 
 // ── Minimal schemas (enough to insert data) ──────────────────────────────────
-const User        = mongoose.models.User        || mongoose.model('User',        new mongoose.Schema({ name:String, email:{type:String,unique:true,lowercase:true}, password:String, role:String, barberShopId:{type:mongoose.Schema.Types.ObjectId,ref:'BarberShop'}, isActive:{type:Boolean,default:true}, photo:{type:String,default:''}, phone:{type:String,default:''} }, { timestamps:true }))
+const User        = mongoose.models.User        || mongoose.model('User',        new mongoose.Schema({ name:String, email:{type:String,unique:true,lowercase:true}, password:String, role:String, barberShopId:{type:mongoose.Schema.Types.ObjectId,ref:'BarberShop'}, isActive:{type:Boolean,default:true}, emailVerified:{type:Boolean,default:true}, photo:{type:String,default:''}, phone:{type:String,default:''} }, { timestamps:true }))
 const BarberShop  = mongoose.models.BarberShop  || mongoose.model('BarberShop',  new mongoose.Schema({ name:String, location:String, ownerId:{type:mongoose.Schema.Types.ObjectId,ref:'User'}, isActive:{type:Boolean,default:true}, coverImage:{type:String,default:''}, description:{type:String,default:''}, instagram:{type:String,default:''}, facebook:{type:String,default:''}, website:{type:String,default:''}, promoVideo:{type:String,default:''} }, { timestamps:true }))
 const Service     = mongoose.models.Service     || mongoose.model('Service',     new mongoose.Schema({ barberShopId:{type:mongoose.Schema.Types.ObjectId,ref:'BarberShop'}, name:String, price:Number, duration:Number }, { timestamps:true }))
 const WorkingHours= mongoose.models.WorkingHours|| mongoose.model('WorkingHours',new mongoose.Schema({ barberId:{type:mongoose.Schema.Types.ObjectId,ref:'User',unique:true}, schedule:{type:mongoose.Schema.Types.Mixed,default:{}}, bufferMinutes:{type:Number,default:0} }))
@@ -33,20 +33,20 @@ async function seed() {
   const shop2 = await BarberShop.create({ name: 'Sharp Blades',     location: '88 Patrick Street, Cork', isActive: true, description: 'Two expert barbers. Classic cuts and modern styles in Cork city centre.', instagram: 'sharpblades_cork' })
 
   // ── Barbers ────────────────────────────────────────────────────────────────
-  const marco = await User.create({ name: 'Marco Rossi', email: 'marco@clipr.com', password: await h('barber123'), role: 'barber', barberShopId: shop1._id, isActive: true, phone: '+353 87 111 1111' })
-  const jake  = await User.create({ name: 'Jake Murphy', email: 'jake@clipr.com',  password: await h('barber123'), role: 'barber', barberShopId: shop2._id, isActive: true, phone: '+353 87 222 2222' })
-  const liam  = await User.create({ name: 'Liam Walsh',  email: 'liam@clipr.com',  password: await h('barber123'), role: 'barber', barberShopId: shop2._id, isActive: true, phone: '+353 87 333 3333' })
+  const marco = await User.create({ name: 'Marco Rossi', email: 'marco@berberot.com', password: await h('barber123'), role: 'barber', barberShopId: shop1._id, isActive: true, phone: '+353 87 111 1111' })
+  const jake  = await User.create({ name: 'Jake Murphy', email: 'jake@berberot.com',  password: await h('barber123'), role: 'barber', barberShopId: shop2._id, isActive: true, phone: '+353 87 222 2222' })
+  const liam  = await User.create({ name: 'Liam Walsh',  email: 'liam@berberot.com',  password: await h('barber123'), role: 'barber', barberShopId: shop2._id, isActive: true, phone: '+353 87 333 3333' })
 
   // Link owners
   shop1.ownerId = marco._id; await shop1.save()
   shop2.ownerId = jake._id;  await shop2.save()
 
   // ── Admin ──────────────────────────────────────────────────────────────────
-  await User.create({ name: 'Admin', email: 'admin@clipr.com', password: await h('admin123'), role: 'admin', isActive: true })
+  await User.create({ name: 'Admin', email: 'admin@berberot.com', password: await h('admin123'), role: 'admin', isActive: true })
 
   // ── Customers ──────────────────────────────────────────────────────────────
-  const alex = await User.create({ name: 'Alex Byrne', email: 'alex@clipr.com', password: await h('customer123'), role: 'customer', isActive: true, phone: '+353 87 444 4444' })
-  const sam  = await User.create({ name: 'Sam Doyle',  email: 'sam@clipr.com',  password: await h('customer123'), role: 'customer', isActive: true, phone: '+353 87 555 5555' })
+  const alex = await User.create({ name: 'Alex Byrne', email: 'alex@berberot.com', password: await h('customer123'), role: 'customer', isActive: true, phone: '+353 87 444 4444' })
+  const sam  = await User.create({ name: 'Sam Doyle',  email: 'sam@berberot.com',  password: await h('customer123'), role: 'customer', isActive: true, phone: '+353 87 555 5555' })
 
   // ── Services ───────────────────────────────────────────────────────────────
   const [s1a, s1b, s1c] = await Service.create([
@@ -96,14 +96,14 @@ async function seed() {
   console.log('\n✅ Seed complete!\n')
   console.log('────────────────────────────────────────────────────')
   console.log('ADMIN')
-  console.log('  admin@clipr.com     / admin123')
+  console.log('  admin@berberot.com     / admin123')
   console.log('\nBARBERS')
-  console.log('  marco@clipr.com     / barber123  →  The Fade Factory (sole barber, Dublin)')
-  console.log('  jake@clipr.com      / barber123  →  Sharp Blades (owner, Cork)')
-  console.log('  liam@clipr.com      / barber123  →  Sharp Blades (2nd barber, Cork)')
+  console.log('  marco@berberot.com     / barber123  →  The Fade Factory (sole barber, Dublin)')
+  console.log('  jake@berberot.com      / barber123  →  Sharp Blades (owner, Cork)')
+  console.log('  liam@berberot.com      / barber123  →  Sharp Blades (2nd barber, Cork)')
   console.log('\nCUSTOMERS')
-  console.log('  alex@clipr.com      / customer123')
-  console.log('  sam@clipr.com       / customer123')
+  console.log('  alex@berberot.com      / customer123')
+  console.log('  sam@berberot.com       / customer123')
   console.log('────────────────────────────────────────────────────')
 
   await mongoose.disconnect()
