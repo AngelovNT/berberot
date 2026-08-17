@@ -1,4 +1,6 @@
-﻿import Link from 'next/link'
+﻿export const dynamic = 'force-dynamic'
+
+import Link from 'next/link'
 import Navbar from '@/components/layout/Navbar'
 import { getSession } from '@/lib/getSession'
 import connectDB from '@/lib/mongodb'
