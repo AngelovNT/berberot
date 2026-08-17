@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
 
     const formData = await request.formData()
     const file = formData.get('file') as File | null
-    const folder = (formData.get('folder') as string) || 'clipr/misc'
+    const folder = (formData.get('folder') as string) || 'berberot/misc'
 
     if (!file) return err('No file provided', 400)
     if (!ALLOWED.includes(file.type)) return err('Only JPEG, PNG, WebP, or GIF allowed', 400)

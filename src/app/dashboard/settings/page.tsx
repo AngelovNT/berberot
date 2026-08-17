@@ -246,7 +246,7 @@ function ShopProfileForm({ shopId }: { shopId: string }) {
         <ImageUpload
           value={profile.coverImage}
           onChange={(url) => set('coverImage')({ target: { value: url } } as React.ChangeEvent<HTMLInputElement>)}
-          folder="clipr/shops"
+          folder="berberot/shops"
           shape="square"
           placeholder="🏪"
         />
@@ -359,7 +359,7 @@ function PhotoForm({ userId }: { userId: string }) {
       <ImageUpload
         value={photo}
         onChange={setPhoto}
-        folder="clipr/barbers"
+        folder="berberot/barbers"
         shape="circle"
         placeholder="👤"
       />

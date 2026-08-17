@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-export const metadata = { title: 'Terms of Service — Clipr' }
+export const metadata = { title: 'Terms of Service — Berberot' }
 
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-ivory">
       <nav className="bg-white border-b border-border-warm px-6 py-4">
         <Link href="/" className="font-display text-xl font-bold tracking-widest text-charcoal">
-          CLIPR<span className="text-brass">.</span>
+          BERBEROT<span className="text-brass">.</span>
         </Link>
       </nav>
 
@@ -20,15 +20,15 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">1. Acceptance</h2>
             <p className="text-warm-gray leading-relaxed">
-              By creating an account or using Clipr ("<strong>the Service</strong>"), you agree to these Terms of Service.
+              By creating an account or using Berberot ("<strong>the Service</strong>"), you agree to these Terms of Service.
               If you do not agree, do not use the Service. These terms are governed by the laws of the Republic of North Macedonia.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold mb-3">2. What Clipr Is</h2>
+            <h2 className="text-lg font-bold mb-3">2. What Berberot Is</h2>
             <p className="text-warm-gray leading-relaxed">
-              Clipr is a booking platform that connects customers with barbershops. We facilitate the booking — we are
+              Berberot is a booking platform that connects customers with barbershops. We facilitate the booking — we are
               <strong> not</strong> a barbershop, employer of barbers, or party to the service agreement between a customer and a barber.
               Barbers and barbershops are independent businesses using our platform.
             </p>
@@ -48,10 +48,10 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">4. Bookings — Customers</h2>
             <ul className="list-disc pl-5 space-y-2 text-warm-gray">
-              <li>Bookings made through Clipr are agreements between you and the barbershop, not with Clipr.</li>
+              <li>Bookings made through Berberot are agreements between you and the barbershop, not with Berberot.</li>
               <li>Please arrive on time. Repeated no-shows may result in account restrictions.</li>
               <li>Cancellation policies are set by individual barbershops. Respect them.</li>
-              <li>Clipr is not responsible for the quality of services provided by barbershops.</li>
+              <li>Berberot is not responsible for the quality of services provided by barbershops.</li>
               <li>If you have a dispute with a barbershop, contact the shop directly in the first instance.</li>
             </ul>
           </section>
@@ -59,7 +59,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">5. Bookings — Barbers</h2>
             <ul className="list-disc pl-5 space-y-2 text-warm-gray">
-              <li>By listing your barbershop on Clipr, you agree to honour confirmed bookings.</li>
+              <li>By listing your barbershop on Berberot, you agree to honour confirmed bookings.</li>
               <li>Your shop information (name, location, description, photos, services, prices) must be accurate and kept up to date.</li>
               <li>You are responsible for setting correct working hours and blocking dates when unavailable.</li>
               <li>You must comply with all applicable North Macedonian laws, including business registration requirements and consumer protection laws.</li>
@@ -78,14 +78,14 @@ export default function TermsPage() {
               <li>The content does not depict anything illegal, offensive, or misleading.</li>
             </ul>
             <p className="text-warm-gray leading-relaxed mt-2">
-              You grant Clipr a non-exclusive, royalty-free licence to store and display your content solely for operating the Service.
+              You grant Berberot a non-exclusive, royalty-free licence to store and display your content solely for operating the Service.
               We may remove content that violates these terms without notice.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-bold mb-3">7. Prohibited Use</h2>
-            <p className="text-warm-gray leading-relaxed">You may not use Clipr to:</p>
+            <p className="text-warm-gray leading-relaxed">You may not use Berberot to:</p>
             <ul className="list-disc pl-5 mt-2 space-y-2 text-warm-gray">
               <li>Create fake bookings or spam barbershops</li>
               <li>Scrape, copy, or resell any part of the platform</li>
@@ -107,7 +107,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">9. Limitation of Liability</h2>
             <p className="text-warm-gray leading-relaxed">
-              To the maximum extent permitted by North Macedonian law, Clipr is not liable for:
+              To the maximum extent permitted by North Macedonian law, Berberot is not liable for:
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-2 text-warm-gray">
               <li>The quality or outcome of barbershop services booked through the platform</li>
@@ -150,7 +150,7 @@ export default function TermsPage() {
 
         <div className="mt-12 pt-8 border-t border-border-warm flex gap-6 text-sm text-warm-gray">
           <Link href="/privacy" className="hover:text-charcoal transition-colors">Privacy Policy</Link>
-          <Link href="/" className="hover:text-charcoal transition-colors">Back to Clipr</Link>
+          <Link href="/" className="hover:text-charcoal transition-colors">Back to Berberot</Link>
         </div>
       </div>
     </div>

@@ -223,8 +223,8 @@ export default async function HomePage({
       </section>
 
       <footer className="bg-white border-t border-border-warm text-warm-gray text-center py-8 space-y-2">
-        <p className="font-display text-lg font-bold tracking-widest text-charcoal">CLIPR<span className="text-brass">.</span></p>
-        <p className="text-sm">© {new Date().getFullYear()} Clipr. All rights reserved.</p>
+        <p className="font-display text-lg font-bold tracking-widest text-charcoal">BERBEROT<span className="text-brass">.</span></p>
+        <p className="text-sm">© {new Date().getFullYear()} Berberot. All rights reserved.</p>
         <div className="flex items-center justify-center gap-4 text-xs">
           <Link href="/privacy" className="hover:text-charcoal transition-colors">Privacy Policy</Link>
           <span>·</span>

@@ -80,7 +80,7 @@ export default function VerifyEmailPage() {
     <div className="min-h-screen bg-ivory flex items-center justify-center px-4">
       <div className="bg-white rounded-2xl shadow-card p-8 w-full max-w-sm text-center">
         <p className="font-display text-xl font-bold tracking-widest text-charcoal mb-8">
-          CLIPR<span className="text-brass">.</span>
+          BERBEROT<span className="text-brass">.</span>
         </p>
         <Suspense fallback={
           <div className="w-10 h-10 border-2 border-charcoal border-t-transparent rounded-full animate-spin mx-auto" />

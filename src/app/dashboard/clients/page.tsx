@@ -119,7 +119,7 @@ function ClientModal({
                 <p className="font-bold text-[#111] text-lg">{client.name}</p>
                 {isFavorite && <span className="text-xs bg-yellow-50 text-yellow-700 border border-yellow-200 px-2 py-0.5 rounded-full font-medium">Favorite</span>}
               </div>
-              <p className="text-sm text-warm-gray">{client.email.includes('@clipr.local') ? 'No email on file' : client.email}</p>
+              <p className="text-sm text-warm-gray">{client.email.includes('@berberot.local') ? 'No email on file' : client.email}</p>
               {client.phone && <p className="text-sm text-warm-gray mt-0.5">{client.phone}</p>}
             </div>
           </div>
@@ -410,7 +410,7 @@ export default function ClientsPage() {
                       {client.isFavorite && <span className="text-sm leading-none flex-shrink-0">⭐</span>}
                     </div>
                     <p className="text-xs text-warm-gray mt-0.5 truncate">
-                      {client.phone || (client.email.includes('@clipr.local') ? 'No contact' : client.email)}
+                      {client.phone || (client.email.includes('@berberot.local') ? 'No contact' : client.email)}
                     </p>
                   </div>
                 </div>

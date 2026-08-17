@@ -20,13 +20,13 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Clipr',
+  title: 'Berberot',
   description: 'Book your next cut in seconds',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Clipr',
+    title: 'Berberot',
   },
   other: {
     'mobile-web-app-capable': 'yes',

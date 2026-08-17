@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
     if (!customer) {
       // Create a new customer account with a random password
       const randomPassword = crypto.randomBytes(16).toString('hex')
-      const customerEmail = email || `${phone.replace(/\D/g, '')}@clipr.local`
+      const customerEmail = email || `${phone.replace(/\D/g, '')}@berberot.local`
 
       // Check if generated email already exists
       const existing = await User.findOne({ email: customerEmail })

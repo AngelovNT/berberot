@@ -65,7 +65,7 @@ export default function DashboardSidebar() {
       <aside className="hidden md:flex flex-col w-56 min-h-screen bg-charcoal">
         <div className="px-5 py-5 border-b border-white/10">
           <Link href="/" className="font-display text-xl font-bold tracking-widest text-white hover:opacity-75 transition-opacity">
-            CLIPR<span className="text-brass">.</span>
+            BERBEROT<span className="text-brass">.</span>
           </Link>
           <p className="text-xs text-white/30 mt-0.5 font-medium tracking-wide uppercase">Dashboard</p>
         </div>

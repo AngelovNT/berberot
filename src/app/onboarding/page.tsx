@@ -308,7 +308,7 @@ export default function OnboardingPage() {
       {/* Header */}
       <header className="bg-white border-b border-border-warm px-4 py-4">
         <div className="max-w-lg mx-auto flex items-center justify-between">
-          <span className="text-xl font-bold text-[#111]">Clipr</span>
+          <span className="text-xl font-bold text-[#111]">Berberot</span>
           <span className="text-sm text-warm-gray">Setup your profile</span>
         </div>
       </header>

@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className="bg-white/80 backdrop-blur-md border-b border-border-warm sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between" style={{ height: '60px' }}>
         <Link href="/" className="font-display text-xl font-bold tracking-widest text-charcoal hover:opacity-75 transition-opacity">
-          CLIPR<span className="text-brass">.</span>
+          BERBEROT<span className="text-brass">.</span>
         </Link>
 
         {!loading && (

@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
-const FROM = process.env.EMAIL_FROM ?? 'Clipr <noreply@berberot.com>'
+const FROM = process.env.EMAIL_FROM ?? 'Berberot <noreply@berberot.com>'
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
 
 export async function sendVerificationEmail(email: string, name: string, token: string) {

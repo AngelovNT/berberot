@@ -145,7 +145,7 @@ export default function JoinPage() {
     <div className="min-h-screen bg-ivory">
       <header className="bg-white border-b border-border-warm px-4 py-4">
         <div className="max-w-lg mx-auto">
-          <span className="text-xl font-bold text-[#111]">Clipr</span>
+          <span className="text-xl font-bold text-[#111]">Berberot</span>
         </div>
       </header>
       <Suspense fallback={<div className="flex justify-center py-20"><Spinner /></div>}>

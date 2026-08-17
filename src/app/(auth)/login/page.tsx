@@ -7,7 +7,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <Link href="/" className="font-display text-2xl font-bold tracking-widest text-charcoal">
-            CLIPR<span className="text-brass">.</span>
+            BERBEROT<span className="text-brass">.</span>
           </Link>
           <h1 className="text-xl font-semibold text-charcoal mt-5">Welcome back</h1>
           <p className="text-warm-gray text-sm mt-1">Sign in to your account</p>

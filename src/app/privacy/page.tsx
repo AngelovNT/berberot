@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-export const metadata = { title: 'Privacy Policy — Clipr' }
+export const metadata = { title: 'Privacy Policy — Berberot' }
 
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-ivory">
       <nav className="bg-white border-b border-border-warm px-6 py-4">
         <Link href="/" className="font-display text-xl font-bold tracking-widest text-charcoal">
-          CLIPR<span className="text-brass">.</span>
+          BERBEROT<span className="text-brass">.</span>
         </Link>
       </nav>
 
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">1. Who We Are</h2>
             <p className="text-warm-gray leading-relaxed">
-              Clipr ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is a barbershop booking platform operated from North Macedonia.
+              Berberot ("<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is a barbershop booking platform operated from North Macedonia.
               We can be contacted at: <a href="mailto:privacy@berberot.com" className="text-charcoal underline">privacy@berberot.com</a>.
             </p>
             <p className="text-warm-gray leading-relaxed mt-2">
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold mb-3">8. Children</h2>
             <p className="text-warm-gray leading-relaxed">
-              Clipr is not directed at children under 16. We do not knowingly collect data from anyone under 16.
+              Berberot is not directed at children under 16. We do not knowingly collect data from anyone under 16.
               If you believe a minor has registered, contact us at <a href="mailto:privacy@berberot.com" className="text-charcoal underline">privacy@berberot.com</a> and we will delete the account immediately.
             </p>
           </section>
@@ -168,7 +168,7 @@ export default function PrivacyPage() {
 
         <div className="mt-12 pt-8 border-t border-border-warm flex gap-6 text-sm text-warm-gray">
           <Link href="/terms" className="hover:text-charcoal transition-colors">Terms of Service</Link>
-          <Link href="/" className="hover:text-charcoal transition-colors">Back to Clipr</Link>
+          <Link href="/" className="hover:text-charcoal transition-colors">Back to Berberot</Link>
         </div>
       </div>
     </div>

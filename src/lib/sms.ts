@@ -37,5 +37,5 @@ export function buildReminderMessage({
   const d = new Date(date + 'T00:00:00').toLocaleDateString('en-IE', {
     weekday: 'long', month: 'long', day: 'numeric',
   })
-  return `Hi ${customerName}! Reminder: your ${serviceName} with ${barberName} at ${shopName} is today at ${startTime} (${d}). See you soon! — Clipr`
+  return `Hi ${customerName}! Reminder: your ${serviceName} with ${barberName} at ${shopName} is today at ${startTime} (${d}). See you soon! — Berberot`
 }
