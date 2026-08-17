@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/reminders/cron?secret=REPLACE_WITH_YOUR_CRON_SECRET",
-      "schedule": "*/30 * * * *"
+      "schedule": "0 8 * * *"
     }
   ]
 }
